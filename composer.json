@@ -1,0 +1,20 @@
+{
+    "name": "sofi/foodbakery_rest",
+    "description": "A wordpress plugin that adds REST api endpoints for Order/Inquiry, Transaction, Package Order and Withdrawal post types.",
+    "type": "wordpress-plugin",
+    "license": "GPL3",
+    "authors": [
+        {
+            "name": "Sofonias Abathun",
+            "email": "sofoniasabathun@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoodbakeryRestApi\\": "src/"
+        }
+    }
+}
