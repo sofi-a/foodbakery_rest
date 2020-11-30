@@ -3,6 +3,30 @@
 namespace FoodbakeryRestApi\Schemas;
 
 class OrderSchema extends Schema {
+    public function __construct()
+    {
+        parent::__construct(array(
+            'type'                  => 'foodbakery_order_type',
+            'order_status'          => 'foodbakery_order_status',
+            'payment_type'          => 'foodbakery_order_paytype',
+            'payment_status'        => 'foodbakery_order_payment_status',
+            'currency'              => 'foodbakery_currency_obj',
+            'subtotal'              => 'order_subtotal_price',
+            'total'                 => 'services_total_price',
+            'vat_percent'           => 'order_vat_percent',
+            'vat'                   => 'order_vat_cal_percent',
+            'order_fee_type'        => 'menu_order_fee_type',
+            'order_fee'             => 'menu_order_fee',
+            'commission_charged'    => 'order_amount_charged',
+            'credited_amount'       => 'order_amount_credited',
+            'items'                 => 'menu_items_list',
+            'restaurant'            => 'foodbakery_restaurant_id',
+            'restaurant_owner'      => 'foodbakery_publisher_id',
+            'order_date'            => 'foodbakery_order_date',
+            'delivery_date'         => 'foodbakery_delivery_date',
+        ));
+    }
+
     public function get_schema($request) {
         return array(
             '$schema'                   => 'http://json-schema.org/draft-04/schema#',

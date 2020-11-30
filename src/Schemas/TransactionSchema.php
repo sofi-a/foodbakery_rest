@@ -3,6 +3,26 @@
 namespace FoodbakeryRestApi\Schemas;
 
 class TransactionSchema extends Schema {
+    public function __construct()
+    {
+        parent::__construct(array(
+            'order_id'              => 'foodbakery_transaction_order_id',
+            'order_type'            =>'foodbakery_transaction_order_type',
+            'payment_gateway'       => 'foodbakery_transaction_pay_method',
+            'payment_status'        => 'foodbakery_order_payment_status',
+            'currency'              => 'foodbakery_currency_obj',
+            'total'                 => 'foodbakery_transaction_amount',
+            'commission_charged'    => 'foodbakery_order_amount_charged',
+            'first_name'            => 'foodbakery_trans_first_name',
+            'last_name'             => 'foodbakery_trans_last_name',
+            'email'                 => 'foodbakery_trans_email',
+            'phone_number'          => 'foodbakery_trans_phone_number',
+			'address'				=> 'foodbakery_trans_address',
+            'restaurant'            => 'foodbakery_restaurant_id',
+            'restaurant_owner'      => 'foodbakery_publisher_id',
+        ));
+    }
+
     public function get_schema($request) {
         return array(
             '$schema'                   => 'http://json-schema.org/draft-04/schema#',

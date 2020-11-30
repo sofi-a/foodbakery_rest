@@ -2,7 +2,7 @@
 /*
 Plugin Name: Foodbakery REST API
 Plugin URI: https://github.com/sofi-a/foodbakery-rest#readme.md
-Description: Adds api endpoints for Order/Inquiry, Transaction, Package Order and Withdrawal post types.
+Description: Adds API endpoints for Order/Inquiry, Transaction, Package Order and Withdrawal post types.
 Version: 1.0
 Author: Sofonias Abathun
 Author URI: https://github.com/sofi-a/
